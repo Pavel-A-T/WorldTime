@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+.main {
+    width: 80%;
+    margin: 20px;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.first-label {
+    margin: 0 20% 0 5px;
+    height: 30px;
+    font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.first {
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.text {
+    margin: 5px;
+    width: 25%;
+    height: 30px;
+    font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.caption {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 120px;
+}
+
+.time-component {
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.close {
+    padding: 0;
+    position: absolute;
+    margin-left: 93px;
+    margin-top: -7px;
+    width: 14px;
+    height: 14px;
+    border: solid 1px black;
+    color: red;
+    background-color: white;
+    align-content: center;
+    border-radius: 50%;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.city {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border: none;
+    height: 20px;
+}
+
+#time {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: solid 1px black;
+    height: 50px;
+}
+
+#hour {
+    margin: 0 0 0 10px;
+}
+
+#clock {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px double #333;
+    background: -webkit-radial-gradient(#333333, #FFFFFF);
+    background: radial-gradient(#333333, #FFFFFF);
+    margin: 2rem auto;
+    position: relative;
+}
+
+#hourhand, #minutehand, #secondhand {
+    position: absolute;
+    background: white;
+    -webkit-transform-origin: bottom center;
+    transform-origin: bottom center;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+#hourhand {
+    width: 4%;
+    height: 30%;
+    left: calc(50% - (4% / 2));
+    top: calc(50% - 30%);
+}
+
+#minutehand {
+    width: 2%;
+    height: 40%;
+    left: calc(50% - (2% / 2));
+    top: calc(50% - 40%);
+}
+
+#secondhand {
+    width: 1%;
+    height: 45%;
+    background: red;
+    left: calc(50% - (1% / 2));
+    top: calc(50% - 45%);
 }
