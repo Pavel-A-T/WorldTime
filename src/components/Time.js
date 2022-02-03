@@ -14,7 +14,7 @@ function Time() {
         setClocks(prevClocks => {
             const arr = prevClocks.slice();
             const id = uuidv4();
-            arr.push(new ClockModel(id, <Clock city={form.city} offset={form.offset} callback={()=>handleRemove(id)}/>));
+            arr.push(new ClockModel(id, form.city, form.offset));
             setForm({city: '', offset: ''});
             return [...arr];
         });
@@ -44,7 +44,9 @@ function Time() {
                 <input className={"text"} type={"submit"} value={"Добавить"}/>
             </div>
             </form>
-            {clocks.map(element => element.clock)}
+            {clocks.map(element => (
+                <Clock key={element.id} city={element.city} offset={element.offset} callback={()=>handleRemove(element.id)}/>
+            ))}
         </div>
     )
 }

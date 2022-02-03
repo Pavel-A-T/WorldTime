@@ -1,7 +1,8 @@
 class ClockModel {
-    constructor(id, clock) {
+    constructor(id, city, offset) {
         this.id = id;
-        this.clock = clock;
+        this.city = city;
+        this.offset = offset;
     }
 }
 
